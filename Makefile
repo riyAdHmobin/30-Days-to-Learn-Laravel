@@ -16,8 +16,8 @@ open-container:
 	docker exec -it 30-days-to-learn-laravel bash
 
 composer-update:
-	docker exec laravel-11 bash -c "composer update"
+	docker exec 30-days-to-learn-laravel bash -c "composer update"
 
 data:
-	docker exec laravel-11 bash -c "php artisan migrate"
-	docker exec laravel-11 bash -c "php artisan db:seed"
+	docker exec 30-days-to-learn-laravel bash -c "php artisan migrate"
+	docker exec 30-days-to-learn-laravel bash -c "php artisan db:seed"
