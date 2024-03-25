@@ -1,9 +1,15 @@
 <?php
 
-
 use Illuminate\Support\Facades\Route;
 
 use App\Models\Job;
+
+Route::get('/db', function () {
+    
+    $jobs = Job::all();
+    dd($jobs[0]->title);
+
+});
 
 Route::get('/welcome', function () {
     return view('welcome');
